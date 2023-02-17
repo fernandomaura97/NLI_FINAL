@@ -1,0 +1,131 @@
+version: "3.1"
+
+intents:
+  - fun_fact
+  - ask_office_building
+  - ask_is_department_on_university
+  - ask_is_professor
+  - ask_same_department_professors
+  - ask_url_department
+  - ask_building_department
+  - ask_room_professor
+  - ask_room_department
+  - ask_other_professor_in_department
+  - ask_department_professor
+  - ask_developer_chatbot
+  - ask_weather
+  - ask_time
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - name
+  - bad_help
+  - good_help
+
+ 
+actions:
+  - action_hello_world
+  - action_give_time
+  - action_department_professor
+  - action_ask_weather
+  - action_fun_fact
+  - action_test_slot_fill
+
+responses:
+
+  utter_deny_department:
+    - text: "There is unfortunately no ... department on the UPF, but we have department for Department_Full"
+
+  utter_confirm_department:
+    - text: "Yes there is an department for .... on the UPF"
+
+  utter_office_in_building:
+    - text: "The room is located in the Poblenue Campus."
+
+  utter_no_problem:
+    - text: "It was a pleasure to help you. I can't wait to speak you again if you have some questions"
+  
+  utter_repeat_question:
+    - text: "Can you please reformulate your question. I did not understand you correctly, sorry"
+
+  utter_department_building:
+    - text: "The AI&ML department is in the Poblenue Campus."
+
+  utter_room_prof:
+    - text: "Professor Jorge Lob is in the AI&ML Department."
+
+  utter_url_department:
+    - text: "The URL is: https://www.upf.edu/web/iis/academic-information."
+  
+  utter_prof_is_college:
+    - text: "Professor Jorge Lobo is a college of Pietje Bell"
+
+  utter_room_in_building:
+    - text: "The room 55.309 is in the Poblenue Campus"
+
+  utter_room_department:
+    - text: "The AI&ML department is the room 55309"
+
+  utter_department_of_prof:
+    - text: "The professor is located in the AI&ML department."
+
+  utter_who_is_developer:
+    - text: "Niels is the beauty (and the brain) behind this awesome chatbot."
+  
+  utter_prof_in_department:
+    - text: "Professor Jorge Lobo is in the department"
+
+  utter_greet:
+    - text: "Hey! I cannot wait to help you with questions related to the professors and their department, office rooms and building where they are located."
+
+  utter_kaas:
+  - text: "Ik hou van kaas"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+entities:
+  - professor
+  - building
+  - department
+  - room
+  - location
+
+nlu:
+- lookup: professor
+  examples: |
+    
+
+slots:
+  professor:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: professor
+
+  location:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: location
+      
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
