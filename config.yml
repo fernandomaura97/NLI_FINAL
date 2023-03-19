@@ -8,7 +8,7 @@ language: en
 
 pipeline:
   - name: WhitespaceTokenizer
-  # - name: RegexFeaturizer
+  - name: RegexFeaturizer
   # - name: RegexEntityExtractor
   #   # text will be processed with case insensitive as default
   #   case_sensitive: False
@@ -18,10 +18,10 @@ pipeline:
   #   use_regexes: True
   #   # use match word boundaries for lookup table
   #   use_word_boundaries: True
-  - name: SpacyNLP
-    model: en_core_web_sm
-  - name: SpacyEntityExtractor
-    dimensions: ["PERSON", "LOC", "ORG"]
+  # - name: SpacyNLP
+  #   model: en_core_web_sm
+  # - name: SpacyEntityExtractor
+  #   dimensions: ["PERSON", "LOC", "ORG"]
   - name: RegexEntityExtractor
     case_sensitive: False
     use_lookup_tables: True

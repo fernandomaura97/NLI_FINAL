@@ -98,7 +98,7 @@ entities:
   - PERSON
 
 slots:
-  prof:
+  professor:
     type: text
     mappings:
     - type: from_entity
