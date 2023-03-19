@@ -95,7 +95,6 @@ entities:
   - department
   - room
   - location
-  - PERSON
 
 slots:
   professor:

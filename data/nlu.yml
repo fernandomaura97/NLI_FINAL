@@ -188,7 +188,6 @@ nlu:
     - Works [Belen](prof) here in the [Research Service]{"entity": "department"}?
     - Do you know [Leo](prof). I think he is in the department of [Web Science and social Computing]{"entity": "department"}?
     - Can I find [Gomez](prof) on the uni?
-    - Is [Maria Rauschenberger](prof) in this company
     - Is [Ricardo Alberto](prof) of the department [AI&ML]{"entity": "department"} here?
 
 - intent: ask_professor_building
@@ -203,15 +202,15 @@ nlu:
 - intent: ask_professor_room
   examples: |
     - Is [Josep](prof) in room [52.205]{"entity": "room"}
-    - Where is the room of [Jorge](prof) located?
-    - Where can i find the [Sayis](prof)?
-    - Which is the room number of [Raquel Gil Rodriquez](prof)?
-    - Where is the office of [Alexander Gomez](prof)?
-    - In which office is [Itziar](prof)? Is it room [55218]{"entity": "room"}
-    - Room [Patricia Vitoria Carrera](prof)?
-    - Where am I most likely to find professor [Olga Slizovskaia](prof)?
-    - Where do I find Mr. [Ivano Colombaro](prof)?
-    - Am I likely to find [Fernandez](prof) in room [55.424]{"entity":"room"}
+    - Where is the room of [jorge lobo](prof) located?
+    - Where can i find the [antonio adame](prof)?
+    - Which is the room number of [raquel gil rodriquez](prof)?
+    - Where is the office of [alexander gomez](prof)?
+    - In which office is [itziar](prof)? Is it room [55218]{"entity": "room"}
+    - Room [vatricia vitoria carrera](prof)?
+    - Where am I most likely to find professor [olga slizovskaia](prof)?
+    - Where do I find Mr. [cvano colombaro](prof)?
+    - Am I likely to find [fernandez](prof) in room [55.424]{"entity":"room"}
     - I am looking for [vicenç gomez](prof)
     - I would like to know where I can find professor [leo wanner](prof)
     - I'm looking for [boris bellalta](prof)
