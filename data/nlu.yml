@@ -232,7 +232,7 @@ nlu:
     - Is [Philip Stovstogan](prof) in the same department as Jorge Lobe?
     - Are [Vincenç Gomez](prof) and [Jorge Lobo](prof) in the same research group?
     - Is the faculty of [Jorge Lobe](prof) and [Neu](prof) the same?
-    - Is [Jens](prof) in the [AI&ML department]{"entity": "department"} working with [Mariella]{"entity":"professor"}?
+    - Is [Jens](prof) in the [AI&ML department]{"entity": "department"} working with [Mariella]{"entity":"prof"}?
     - Are [Maria](prof) and [NURIA BARRIO](prof) both in [AI&ML research group]{"entity": "department"}?
 
 - intent: ask_professor_department

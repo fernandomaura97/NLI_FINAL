@@ -93,7 +93,7 @@ entities:
   - location
 
 nlu:
-- lookup: professor
+- lookup: prof
   examples: | 
     - jorge lobo
     - marco jerome gasparrini
