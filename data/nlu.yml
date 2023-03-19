@@ -42,7 +42,7 @@ nlu:
     - Sorry it is [Albo laia](prof)
     - 
 
-- intent: ask_building_departments
+- intent: ask_building_department
   examples: |
     - Which departments are in building [Edifici La Nau]{"entity": "building"}
     - Which research groups can i find in the campus [La Nau]{"entity": "building"}
@@ -53,7 +53,7 @@ nlu:
     - Which employees can i find in the campus [La Nau]{"entity": "building"}
     - WHo is currently in building [Tanger]{"entity": "building"}
 
-- intent: ask_building_rooms
+- intent: ask_building_room
   examples: |
     - Which rooms are in building [Edifici La Nau]{"entity": "building"}
     - Which classroom can i find in the campus [La Nau]{"entity": "building"}

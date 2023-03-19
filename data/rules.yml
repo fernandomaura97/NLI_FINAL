@@ -6,6 +6,7 @@ rules:
   steps:
   - intent: goodbye
   - action: utter_goodbye
+  - action: action_restart
 
 - rule: Say it was a please after user's say thankyou for your help
   steps:
