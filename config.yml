@@ -8,17 +8,19 @@ language: en
 
 pipeline:
   - name: WhitespaceTokenizer
-  - name: RegexFeaturizer
-  - name: RegexEntityExtractor
-    # text will be processed with case insensitive as default
-    case_sensitive: False
-    # use lookup tables to extract entities
-    use_lookup_tables: True
-    # use regexes to extract entities
-    use_regexes: True
-    # use match word boundaries for lookup table
-    use_word_boundaries: True
-
+  # - name: RegexFeaturizer
+  # - name: RegexEntityExtractor
+  #   # text will be processed with case insensitive as default
+  #   case_sensitive: False
+  #   # use lookup tables to extract entities
+  #   use_lookup_tables: True
+  #   # use regexes to extract entities
+  #   use_regexes: True
+  #   # use match word boundaries for lookup table
+  #   use_word_boundaries: True
+  - name: SpacyNLP
+    model: en_core_web_sm
+  - name: SpacyEntityExtractor
   - name: CountVectorsFeaturizer
   - name: DIETClassifier
     epochs: 100
