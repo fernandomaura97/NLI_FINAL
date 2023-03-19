@@ -197,7 +197,7 @@ class ActionHelloWorld(Action):
         def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-                prof = tracker.get_slot("professor")
+                prof = tracker.get_slot("prof")
                 if prof == None: #Slot Value Was Not Given By User
                     message =f"Sorry, I did not understand the name of the professor correctly or you forget to mention his name. Can you repeat his name?."
                 else:

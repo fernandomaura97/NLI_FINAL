@@ -186,7 +186,7 @@ stories:
     - intent: ask_room_professors
     - action: action_information_room
  
-- story: 11.2 user ask about collegues professor (FORGET PROF NAME)
+- story: 11.2 user ask about colleagues professor (FORGET PROF NAME)
   steps:
     - intent: greet
     - action: utter_greet

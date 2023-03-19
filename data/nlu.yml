@@ -39,7 +39,8 @@ nlu:
     - [Marti Montiel]{"entity": "professor"}
     - [Anders Johnsson]{"entity": "professor"}
     - Sorry I meant [Anders Johnsson]{"entity": "professor"}
-    - Sorry it is [ALBO, LAIA]{"entity": "professor"}
+    - Sorry it is [Albo laia]{"entity": "professor"}
+    - 
 
 - intent: ask_building_departments
   examples: |
@@ -211,7 +212,7 @@ nlu:
     - Where am I most likely to find professor [Olga Slizovskaia]{"entity": "professor"}?
     - Where do I find Mr. [Ivano Colombaro]{"entity": "professor"}?
     - Am I likely to find [Fernandez]{"entity": "professor"} in room [55.424]{"entity":"room"}
-    - I am looking for [vicenç gomez]{"entity": professor}
+    - I am looking for [vicenç gomez]{"entity": "professor"}
     - I would like to know where I can find professor [leo wanner]{"entity": "professor"}
     - I'm looking for [boris bellalta]{"entity": "professor"}
 
@@ -234,6 +235,7 @@ nlu:
     - Is [Jens]{"entity": "professor"} in the [AI&ML department]{"entity": "department"} working with [Mariella]{"entity":"professor"}?
     - Are [Maria]{"entity": "professor"} and [NURIA BARRIO]{"entity": "professor"} both in [AI&ML research group]{"entity": "department"}?
 
+[jorge lobo](professor)
 - intent: ask_professor_department
   examples: |
     -In which department is professor [Jorge Lobo]{"entity": "professor"}

@@ -61,7 +61,7 @@ responses:
     - text: "You can find more information about Pompue Fabra (UPF) on the website https://www.upf.edu/"
   
   utter_who_is_developer:
-    - text: "Niels, Rafeal and Fernando are the beauty (and the brains) powering me!"
+    - text: "Niels, Rafael and Fernando are the beauty (and the brains) powering me!"
   
   utter_greet:
     - text: "Hey! I cannot wait to help you with questions related to the professors, departments, office rooms and buildings on the Pompue Fabra University in Barcelona. I can also help you with information regarding the weather, time. And if you want to impress your friends I can tell you funny facts or jokes!"
@@ -85,7 +85,7 @@ responses:
   - text: "I'm sorry"
 
 entities:
-  - professor
+  - prof
   - building
   - department
   - room
@@ -352,7 +352,7 @@ nlu:
 
 
 slots:
-  professor:
+  prof:
     type: text
     mappings:
     - type: from_entity
