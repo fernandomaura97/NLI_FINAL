@@ -34,12 +34,12 @@ nlu:
 
 - intent: clarify_professor
   examples: |
-    - His name is [Xavier Monti LLopis]{"entity": "professor"}?
-    - It is professor [Patricia Pino]{"entity": "professor"}?
-    - [Marti Montiel]{"entity": "professor"}
-    - [Anders Johnsson]{"entity": "professor"}
-    - Sorry I meant [Anders Johnsson]{"entity": "professor"}
-    - Sorry it is [Albo laia]{"entity": "professor"}
+    - His name is [Xavier Monti LLopis](prof)?
+    - It is professor [Patricia Pino](prof)?
+    - [Marti Montiel](prof)
+    - [Anders Johnsson](prof)
+    - Sorry I meant [Anders Johnsson](prof)
+    - Sorry it is [Albo laia](prof)
     - 
 
 - intent: ask_building_departments
@@ -137,13 +137,13 @@ nlu:
 
 - intent: ask_room_professors
   examples: |
-    - Which other professor than [Demiral]{"entity": "professor"} are in room [52.345]{"entity": "room"}
+    - Which other professor than [Demiral](prof) are in room [52.345]{"entity": "room"}
     - Which professors are in [55.320]{"entity":"room"}?
     - Professor in room [55.200]{"entity":"room"}?
     - Do you know which researcher are in [55.200]{"entity":"room"}?
     - Is there someone in room [55200]{"entity":"room"}?
     - Who can i find in [51822]{"entity":"room"}?
-    - Is [Jorge Lobo]{"entity": "professor"} in room [56234]{"entity": "room"}
+    - Is [Jorge Lobo](prof) in room [56234]{"entity": "room"}
 
 - intent: ask_room_building
   examples: |
@@ -169,85 +169,85 @@ nlu:
 
 - intent: ask_professor_general_information
   examples: |
-    - Can I have more information about professor [Rauschenberger]{"entity": "professor"}?
-    - Can you tell me anything about [Rasoul Nikbakht]{"entity": "professor"}?
-    - I want to know more about [Zaira Pindado Tost]{"entity": "professor"} of the research group [SIMBIOsys]{"entity": "department"}
-    - General information [Karimihahighi]{"entity": "professor"}
-    - Do you know more about [Santiago]{"entity": "professor"}
-    - Do you have a description of [Federico Franzoni]{"entity": "professor"} of the [Research, Promotion & Activities]{"entity": "department"}?
+    - Can I have more information about professor [Rauschenberger](prof)?
+    - Can you tell me anything about [Rasoul Nikbakht](prof)?
+    - I want to know more about [Zaira Pindado Tost](prof) of the research group [SIMBIOsys]{"entity": "department"}
+    - General information [Karimihahighi](prof)
+    - Do you know more about [Santiago](prof)
+    - Do you have a description of [Federico Franzoni](prof) of the [Research, Promotion & Activities]{"entity": "department"}?
 
 - intent: ask_professor_is
   examples: |
-    - Is [Alex]{"entity": "professor"} a professor at Pompeu Fabra?
-    - Is [Jens Grivolla]{"entity": "professor"} teaching at UPF?
-    - Is [Gerard]{"entity": "professor"} working on the university?
-    - Is [Dimicocoli]{"entity": "professor"} working on the UPF?
-    - Is there a professor called [Item Cetin]{"entity": "professor"}?
-    - Is [Francesco]{"entity": "professor"} working here?
-    - [Carla Ten ventura]{"entity": "professor"} professor at department [WN]{"entity": "department"}?
-    - Works [Belen]{"entity": "professor"} here in the [Research Service]{"entity": "department"}?
-    - Do you know [Leo]{"entity": "professor"}. I think he is in the department of [Web Science and social Computing]{"entity": "department"}?
-    - Can I find [Gomez]{"entity": "professor"} on the uni?
-    - Is [Maria Rauschenberger]{"entity": "professor"} in this company
-    - Is [Ricardo Alberto]{"entity": "professor"} of the department [AI&ML]{"entity": "department"} here?
+    - Is [Alex](prof) a professor at Pompeu Fabra?
+    - Is [Jens Grivolla](prof) teaching at UPF?
+    - Is [Gerard](prof) working on the university?
+    - Is [Dimicocoli](prof) working on the UPF?
+    - Is there a professor called [Item Cetin](prof)?
+    - Is [Francesco](prof) working here?
+    - [Carla Ten ventura](prof) professor at department [WN]{"entity": "department"}?
+    - Works [Belen](prof) here in the [Research Service]{"entity": "department"}?
+    - Do you know [Leo](prof). I think he is in the department of [Web Science and social Computing]{"entity": "department"}?
+    - Can I find [Gomez](prof) on the uni?
+    - Is [Maria Rauschenberger](prof) in this company
+    - Is [Ricardo Alberto](prof) of the department [AI&ML]{"entity": "department"} here?
 
 - intent: ask_professor_building
   examples: |
-    - Is professor [Laura Baumgartner]{"entity": "professor"} in the [Edifici La Nau]{"entity": "building"} building?
-    - In which campus is [Bart Bijnens]{"entity": "professor"}
-    - Where in the city can I find [Mario Ceresa]{"entity": "professor"}
-    - Building [Simone Tassani]{"entity": "professor"}
-    - Which house can i find [Sergio Sanchez Martinez]{"entity": "professor"}
-    - Can I find [Carlos Eduardo]{"entity": "professor"} in the [Edifici La Nau]{"entity": "building"} campus?
+    - Is professor [Laura Baumgartner](prof) in the [Edifici La Nau]{"entity": "building"} building?
+    - In which campus is [Bart Bijnens](prof)
+    - Where in the city can I find [Mario Ceresa](prof)
+    - Building [Simone Tassani](prof)
+    - Which house can i find [Sergio Sanchez Martinez](prof)
+    - Can I find [Carlos Eduardo](prof) in the [Edifici La Nau]{"entity": "building"} campus?
 
 - intent: ask_professor_room
   examples: |
-    - Is [Josep]{"entity": "professor"} in room [52.205]{"entity": "room"}
-    - Where is the room of [Jorge]{"entity": "professor"} located?
-    - Where can i find the [Sayis]{"entity": "professor"}?
-    - Which is the room number of [Raquel Gil Rodriquez]{"entity": "professor"}?
-    - Where is the office of [Alexander Gomez]{"entity": "professor"}?
-    - In which office is [Itziar]{"entity": "professor"}? Is it room [55218]{"entity": "room"}
-    - Room [Patricia Vitoria Carrera]{"entity": "professor"}?
-    - Where am I most likely to find professor [Olga Slizovskaia]{"entity": "professor"}?
-    - Where do I find Mr. [Ivano Colombaro]{"entity": "professor"}?
-    - Am I likely to find [Fernandez]{"entity": "professor"} in room [55.424]{"entity":"room"}
-    - I am looking for [vicenç gomez]{"entity": "professor"}
-    - I would like to know where I can find professor [leo wanner]{"entity": "professor"}
-    - I'm looking for [boris bellalta]{"entity": "professor"}
+    - Is [Josep](prof) in room [52.205]{"entity": "room"}
+    - Where is the room of [Jorge](prof) located?
+    - Where can i find the [Sayis](prof)?
+    - Which is the room number of [Raquel Gil Rodriquez](prof)?
+    - Where is the office of [Alexander Gomez](prof)?
+    - In which office is [Itziar](prof)? Is it room [55218]{"entity": "room"}
+    - Room [Patricia Vitoria Carrera](prof)?
+    - Where am I most likely to find professor [Olga Slizovskaia](prof)?
+    - Where do I find Mr. [Ivano Colombaro](prof)?
+    - Am I likely to find [Fernandez](prof) in room [55.424]{"entity":"room"}
+    - I am looking for [vicenç gomez](prof)
+    - I would like to know where I can find professor [leo wanner](prof)
+    - I'm looking for [boris bellalta](prof)
 
 - intent: ask_professor_collegues 
   examples: |
-    - Which professors are in the same department as [Jorge Lobo]{"entity": "professor"}?
-    - Can you give the other professors in the department of [Ciera Crowell]{"entity": "professor"}?
-    - Who are the collegues of [Martinez]{"entity": "professor"}?
-    - With who works [Olga Slizovskaia]{"entity": "professor"} together?
-    - Give the collegues of [Gerald]{"entity": "professor"}
-    - With who is [Philip Stovstogan]{"entity": "professor"} in the department of [CMTECH: Cognitive Media Technologies Group]{"entity":"department"}?
-    - [Jorge Lobo]{"entity": "professor"} is not available, can you give other professors in his department [CMTECH]{"entity":"department"}?
-    - [Ninad Puranik]{"entity": "professor"} other collegues
-    - Who are the teammates of [Andres Ferraro]{"entity": "professor"}?
-    - Who is likely to work closely together with [Sergio Oramas Martin]{"entity": "professor"} in the [BERG Biomedical Electronics Research Group]{"entity":"department"}?
-    - Which collegues of [Vincenç Gomez]{"entity": "professor"} are also in the research group [AI&ML]{"entity":"department"}
-    - Is [Philip Stovstogan]{"entity": "professor"} in the same department as Jorge Lobe?
-    - Are [Vincenç Gomez]{"entity": "professor"} and [Jorge Lobo]{"entity": "professor"} in the same research group?
-    - Is the faculty of [Jorge Lobe]{"entity": "professor"} and [Neu]{"entity": "professor"} the same?
-    - Is [Jens]{"entity": "professor"} in the [AI&ML department]{"entity": "department"} working with [Mariella]{"entity":"professor"}?
-    - Are [Maria]{"entity": "professor"} and [NURIA BARRIO]{"entity": "professor"} both in [AI&ML research group]{"entity": "department"}?
+    - Which professors are in the same department as [Jorge Lobo](prof)?
+    - Can you give the other professors in the department of [Ciera Crowell](prof)?
+    - Who are the collegues of [Martinez](prof)?
+    - With who works [Olga Slizovskaia](prof) together?
+    - Give the collegues of [Gerald](prof)
+    - With who is [Philip Stovstogan](prof) in the department of [CMTECH: Cognitive Media Technologies Group]{"entity":"department"}?
+    - [Jorge Lobo](prof) is not available, can you give other professors in his department [CMTECH]{"entity":"department"}?
+    - [Ninad Puranik](prof) other collegues
+    - Who are the teammates of [Andres Ferraro](prof)?
+    - Who is likely to work closely together with [Sergio Oramas Martin](prof) in the [BERG Biomedical Electronics Research Group]{"entity":"department"}?
+    - Which collegues of [Vincenç Gomez](prof) are also in the research group [AI&ML]{"entity":"department"}
+    - Is [Philip Stovstogan](prof) in the same department as Jorge Lobe?
+    - Are [Vincenç Gomez](prof) and [Jorge Lobo](prof) in the same research group?
+    - Is the faculty of [Jorge Lobe](prof) and [Neu](prof) the same?
+    - Is [Jens](prof) in the [AI&ML department]{"entity": "department"} working with [Mariella]{"entity":"professor"}?
+    - Are [Maria](prof) and [NURIA BARRIO](prof) both in [AI&ML research group]{"entity": "department"}?
 
 - intent: ask_professor_department
   examples: |
-    -In which department is professor [Jorge Lobo]{"entity": "professor"}
-    -What is the department of [Vincente Gomez]{"entity": "professor"}?
-    -Where is the research group of professor [Marco Jeroma Gasparrini]{"entity": "professor"}?
-    -In which research group is professor [Anders Jonnson]{"entity": "professor"}?
-    -What is the research group of [G. Neu]{"entity": "professor"}
-    -Department [Marti Sanchez Fibla]{"entity": "professor"}?
-    -In which field is [Damien Allonsius]{"entity": "professor"} operating? 
-    - Where is the department of the prof [Batuhan Sayis]{"entity": "professor"}? 
-    - Department professor [Alexander Gomez Villa]{"entity": "professor"}? 
-    - Which department can I find professor [Gloria Haro Ortega]{"entity": "professor"}? 
-    - Do you know the department of [Lara Raad Cisa]{"entity": "professor"}? 
+    -In which department is professor [Jorge Lobo](prof)
+    -What is the department of [Vincente Gomez](prof)?
+    -Where is the research group of professor [Marco Jeroma Gasparrini](prof)?
+    -In which research group is professor [Anders Jonnson](prof)?
+    -What is the research group of [G. Neu](prof)
+    -Department [Marti Sanchez Fibla](prof)?
+    -In which field is [Damien Allonsius](prof) operating? 
+    - Where is the department of the prof [Batuhan Sayis](prof)? 
+    - Department professor [Alexander Gomez Villa](prof)? 
+    - Which department can I find professor [Gloria Haro Ortega](prof)? 
+    - Do you know the department of [Lara Raad Cisa](prof)? 
 
 - intent: ask_more_information_upf
   examples: |

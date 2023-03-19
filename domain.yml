@@ -86,7 +86,6 @@ responses:
   - text: "I'm sorry"
 
 entities:
-  - professor
   - prof
   - building
   - department
@@ -358,7 +357,7 @@ slots:
     type: text
     mappings:
     - type: from_entity
-      entity: professor
+      entity: prof
 
   location:
     type: text
