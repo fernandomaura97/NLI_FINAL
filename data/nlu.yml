@@ -428,3 +428,369 @@ nlu:
     - Ty for the information
     - That was helpfull
     - Okay, thanks
+
+
+
+- lookup: prof
+  examples: | 
+    - jorge lobo
+    - marco jerome gasparrini
+    - vicente gomez cerda
+    - anders jonsson
+    - gergely neu
+    - marti sanchez fibla
+    - victor dalmau lloret
+    - vladimir estivill castro
+    - pablo aragon asenjo
+    - joan bas serrano
+    - silvia butti
+    - iuliia olkhovskaia
+    - nicolas gaston rozado
+    - lorenzo steccanella
+    - damien allonsius
+    - berkay demirel
+    - ana gonzalez suarez
+    - javier aguirre olcoz
+    - quim castellvi
+    - albert comerma montells
+    - tomás garcia sanchez
+    - aracelys garcia moreno
+    - laura becerra fajardo
+    - ahmed fayez saad mohamed eladly eladly
+    - borja mercadal cavaller
+    - jesus minguillon campos
+    - marc tudela pi
+    - guillermo jimenez perez
+    - rocio lopez velazco
+    - enric perera i bel
+    - antonio ivorra cano
+    - xerxes dinyar arsiwalla
+    - riccardo zucca
+    - ciera crowell
+    - laura malinverni
+    - joan mora guiard
+    - marie-monique schaper
+    - decky latif
+    - oriol martinez pujol
+    - xavier binefa valls
+    - adriana fernandez lopez
+    - gerald hahn
+    - maria de araceli morales muñoz
+    - federico mateo sukno
+    - narcis pares burgues
+    - batuhan sayis
+    - ernest montbrió fairen
+    - marcelo josé bertalmio barate
+    - trevor dalton canham
+    - praveen cyriac
+    - raquel gil rodriguez
+    - alexander gomez villa
+    - itziar zabaleta razquin
+    - adrian martin fernandez
+    - adrià arbues sangüesa
+    - adrian fernando ponce alvarez
+    - patricia vitoria carrera
+    - coloma maria ballester nicolau
+    - gloria haro ortega
+    - lara raad cisa
+    - juan francisco garamendi bragado
+    - juan felipe montesinos garcia
+    - venkatesh shenoy kadandale
+    - olga slizovskaia
+    - josep font segura
+    - alfonso martinez vicente
+    - ivano colombaro
+    - arezou rezazadeh
+    - sergio barrachina muñoz
+    - albert guillen fabregas
+    - sebastián roberto marichal baraibar
+    - javier agenjo asensio
+    - irum baseer
+    - maria bosser carenys
+    - beatriz cabrero daniel
+    - joaquim colas alvarez
+    - ricardo jorge marques
+    - judit martínez moreno
+    - hermann plass portulas
+    - jose angel blat gimeno
+    - philip tovstogan
+    - mehmet furkan yesiler
+    - rafael caro repetto
+    - vsevolod eremenko
+    - ninad puranik
+    - antónio filipe santana ramires
+    - tiange zhu
+    - david cabrera
+    - albin andrew correya
+    - xavier favory
+    - andres ferraro
+    - eduardo david fonseca montero
+    - frederic font corbera
+    - sergio oramas martin
+    - alastair stewart porter
+    - pablo alonso jimenez
+    - dmitry bogdanov
+    - jordi pons puig
+    - minz won
+    - merlijn blaauw
+    - jordi bonada sanjaume
+    - marti umbert morist
+    - aggelos gkiokas
+    - marius miron
+    - alfonso antonio perez carrillo
+    - emilia gomez gutierrez
+    - enrique guaus termens
+    - agustin martorell dominguez
+    - sergio iván giraldo mendez
+    - rafael ramirez melendez
+    - zacharias vamvakousis
+    - helena cuesta mussarra
+    - juan sebastián gomez cañon
+    - perfecto jose herrera boyer
+    - lorenzo porcaro
+    - joan serra julia
+    - angel-david blanco casares
+    - azadeh faridi ermagan
+    - sonia espi fernandez
+    - cristina garrido franquet
+    - francesc xavier serra casals
+    - sergi jorda puig
+    - andres lewin richter osiander
+    - angel faraldo perez
+    - leo wanner
+    - horacio saggion
+    - miquel oliver riera
+    - ralph gregor andrzejak
+    - federico devalle
+    - cristina gonzalez martinez
+    - irene malvestio
+    - angela ogbugwa ochugboju
+    - giulia ruzzene
+    - judit chamorro servent
+    - marta guardiola garcia
+    - carlos yagüe mendez
+    - ruben doste beltran
+    - gerard marti juan
+    - mariana nogueira
+    - cecilia maria costa bento sousa nunes
+    - morteza rasouligandomani
+    - oscar camara rey
+    - bart h bijnens
+    - paloma benavent climent
+    - belen pascual molina
+    - manuel ronda carrasco
+    - miguel angel gonzalez ballester
+    - mario ceresa
+    - nerea mangado lopez
+    - katharina heil
+    - karim lekadir
+    - jerome bernard noailly
+    - andy luis olivares miyares
+    - carlos eduardo ruiz wills
+    - simone tassani
+    - sergio sanchez martinez
+    - jordina torrents barrena
+    - laura baumgartner
+    - víctor manuel campello roman
+    - irem cetin
+    - amelia jimenez sanchez
+    - eric lluch alvarez
+    - pablo-miki martí castellote
+    - gema piella fenoy
+    - joan codina filba
+    - hamdi alp öktem
+    - mireia farrus cabeceran
+    - ahmed ghassan tawfiq abura'ed
+    - francesco barbieri
+    - giorgia cistola
+    - alex peiro lilja
+    - roberto juan carlini salguero
+    - carla ten ventura
+    - jens grivolla
+    - gerard casamayor del bosque
+    - alexandra-catalina matreata
+    - mariella dimiccoli
+    - beatriz fisas elizalde
+    - alexander shvets
+    - pablo accuosto
+    - alex bravo serrano
+    - kim cheng sheang
+    - laia albo
+    - ishari amarasinghe
+    - marc yoshimi beardsley
+    - milica vujovic
+    - pascual pablo abenia polo
+    - davinia hernandez leo
+    - patricia santos rodriguez
+    - enric peig olive
+    - joan antoni melia segui
+    - rafael pous andres
+    - victor casamayor pujol
+    - veronica moreno oliver
+    - judith champion colell
+    - nuria figuls fernandez
+    - montserrat jaureguizar salas
+    - maria lourdes ventayol borras
+    - lydia garcia escobosa
+    - jana safrankova
+    - maria montserrat brillas rosell
+    - montserrat serrano raguan
+    - joana clotet sule
+    - vanessa jimenez garcia
+    - mohit hemchandra adhikari
+    - boris bellalta jimenez
+    - francisco jose wilhelmi roca
+    - federico franzoni
+    - rasoul nikbakht silab
+    - zaira pindado tost
+    - xavier salleras soler
+    - javier silva velon
+    - vanesa daza fernandez
+    - carla rafols salvador
+    - angel lozano solsona
+    - antonio adame vazquez
+    - albert bel pereira
+    - marc carrascosa zamacois
+    - alejandro alcaine otin
+    - carlos alberto alejandro castillo ocaranza
+    - ana maria freire veiga
+    - santiago galella toledo
+    - marzieh karimihaghighi
+    - diana michelle ramirez cifuentes
+    - maria rauschenberger
+    - ricardo alberto baeza yates
+- lookup: room
+  examples: | 
+    - 55110
+    - 55130
+    - 55200
+    - 55201
+    - 55210
+    - 55215
+    - 55217
+    - 55219
+    - 51008
+    - 51014
+    - 51015
+    - 51017
+    - 55119
+    - 51100
+    - 55102
+    - 55112
+    - 55126
+    - 55300
+    - 55301
+    - 55302
+    - 55305
+    - 55306
+    - 55308
+    - 55310
+    - 55314
+    - 55316
+    - 55318
+    - 55320
+    - 55428
+    - 55307
+    - 55012
+    - 55018
+    - 55014
+    - 55020
+    - 55101
+    - 55202
+    - 55216
+    - 55218
+    - 55228
+    - 55.11
+    - 55.13
+    - 55.2
+    - 55.201
+    - 55.21
+    - 55.215
+    - 55.217
+    - 55.219
+    - 51.008
+    - 51.014
+    - 51.015
+    - 51.017
+    - 55.119
+    - 51.1
+    - 51.107
+    - 55.108
+    - 55.122
+    - 55.124
+    - 55.22
+    - 55.312
+    - 55.324
+- lookup: building
+  examples: |
+    - La nau
+    - Area tallers
+    - Library
+    - Tanger building
+     
+- lookup: department
+  examples: |
+    - AI&ML
+    - BERG Biomedical Electronics Research Group
+    - CMTECH
+    - Computational Neuroscience
+    - IP4EC
+    - IPG
+    - ITC
+    - ITG
+    - MTG
+    - Natural Language Processing
+    - NETS Network Technologies and Strategies Group
+    - NTSA
+    - Physense
+    - Research Service 
+    - SIMBIOsys
+    - TALN; Natural Language Processing
+    - TALN
+    - TIDE
+    - UBICALAB
+    - UGA TIC - Pedagogue in USQUID
+    - UGA TIC Head of the Management and Administration  Unit
+    - UGA TIC- Polytechnic School
+    - UGA TIC- Polytechnic School Coordinator 
+    - UGA TIC- Recruitment , Docorate & International ETIC
+    - UGA TIC- Recruitment , Docorate & International ETIC Coordinator 
+    - UGA TIC- Recruitment , Doctorate & International ETIC
+    - UGA TIC
+    - WN
+    - WSSC
+    - Artificial Intelligence and Machine Learning group
+    - nan
+    - Cognitive Media Technologies Group
+    - Cognitive Media Technologies Group /MTG
+    - Image Processing Group
+    - Image Processing Group /MTG
+    - Image Processing Group/ MTG
+    - Information Theory and Coding Group
+    - Interactive Technologies Group
+    - Music Technology Group
+    - Music Technology Group / PHONOS
+    - Nonlinear Time Series Analysis Group
+    - Sensing in Physiology and Biomedicine Group
+    - Simulation, Imaging and Modelling for Biomedical Systems
+    - Interactive & Distributed Technologies for Education
+    - Ubiquitous Computing Applications Lab
+    - Research, Promotion & Activities
+    - Research, Promotion & Activities Coordinator
+    - Wireless Networking Group
+    - Web Science and Social Computing
+
+- synonym: room
+  examples: |
+      - laboratory
+      - room
+      - desk
+      - lab
+      - headroom
+
+- synonym: research group
+  examples: |
+    - research group
+    - group
+    - working group
+    - scientific crew

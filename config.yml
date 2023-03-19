@@ -21,6 +21,10 @@ pipeline:
   - name: SpacyNLP
     model: en_core_web_sm
   - name: SpacyEntityExtractor
+    dimensions: ["PERSON", "LOC", "ORG"]
+  - name: RegexEntityExtractor
+    case_sensitive: False
+    use_lookup_tables: True
   - name: CountVectorsFeaturizer
   - name: DIETClassifier
     epochs: 100
