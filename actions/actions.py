@@ -43,6 +43,7 @@ df['Professor_Last_Name'] = out[0].str.strip()
 df['Professor_First_Last_Name'] = df['Professor_First_Name'] +" "+ df['Professor_Last_Name']
 df['Professor_Last_First_Name'] = df['Professor_Last_Name'] +" "+ df['Professor_First_Name']
 df['Professor_Nice_Name'] = df['Professor_First_Last_Name'].str.title()
+
 professors = []
 professors = np.append(professors, df['Professor_First_Name'].values)
 professors = np.append(professors, df['Professor_Last_Name'].values)
@@ -71,8 +72,37 @@ departments = np.append(departments, df['Department_Short'].values)
 departments_list = departments
 #Part 4 Create List With All Ways Users Can Possibly Specify The Building
 df['Building_UP'] = df.Building.str.upper()
+
+
 Buildings = df.Building_UP.unique()
 buildings_list = Buildings
+
+count = 0
+for i in df.Room_with_Dot:
+  count += 1
+  try:
+    j = float(i)
+    # print("J:",j, int(j%50))
+    j = int(j%50)
+    # print("df  thing? ", df.Building_UP[count])
+    if j == 1:
+      df.Building_UP[count] = "La Nau".upper()
+    elif j == 2: 
+      df.Building_UP[count] = "Roc Boronat".upper()
+    elif j == 3: 
+      df.Building_UP[count] = "Roc Boronat".upper()
+    elif j == 4: 
+      df.Building_UP[count] = "Area Tallers".upper()
+    elif j == 5: 
+      df.Building_UP[count] = "Tanger building".upper()
+    # print(df.Building_UP[count])
+
+  except:
+    df.Building_UP[count] = "Tanger building".upper()
+    print("")
+
+df['Building'] = df['Building_UP']
+
 
 #Part 5 Colls of DF related to topic
 prof_cols = ['Professor_First_Name','Professor_First_Last_Name','Professor_Last_First_Name','Professor_Last_Name']
@@ -236,6 +266,7 @@ class ActionHelloWorld(Action):
                         print (other_professors)
                         other_professors.remove(professor)
                         building = df_info["Building"].to_string(index=False)
+                        building = building.lower()
                         message = (f"Professor {professor} could be find in room: {room} in the {department_search} department together with {', '.join(other_professors)}. This department is located in the {building} building.")
                 #message = f'{prof}'
                 dispatcher.utter_message(text=message)
@@ -286,7 +317,7 @@ class ActionHelloWorld(Action):
                         building = df_info["Building"].unique().tolist()
                         mess_prof = f"The following {len(professor)} professors are in the {', '.join(department)} department: {', '.join(professor)}."
                         mess_room = f"The {', '.join(department)} department is located in the following rooms: {', '.join(room)}."
-                        mess_building = f"These rooms are located in these building(s): {', '.join(building)}."
+                        mess_building = f"These rooms are located in these building(s): {', '.join(building).lower()}."
                         message = mess_building + "\n" + mess_room + "\n" + mess_prof
                 dispatcher.utter_message(text=message)
 
