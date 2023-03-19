@@ -253,7 +253,7 @@ class ActionHelloWorld(Action):
                             else: #We Found Similar Professors With Same Confidence Level But Are Not Sure About It.
                                 similar_names = result_fuzzy.keys()
                                 similar_names_list = df[(df.isin(similar_names).sum(axis=1))>0]['Professor_Nice_Name'].values
-                                message=  (f"Sorry, I could not find the professor you were looking for. Is there any probability you were looking for one of the following professors? {str(similar_names_list)[1:-1]}.")
+                                message=  (f"Sorry, I could not find the professor you were looking for. Is there any probability you were looking for one of the following professors? {str(similar_names_list[:6])[1:-1]}.")
                     #Print Information if Confident Enough About the Professors Name
                     if  prof_found == True:
                         professor = df_info["Professor_Nice_Name"].to_string(index=False)   
