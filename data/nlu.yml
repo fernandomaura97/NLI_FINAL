@@ -1,0 +1,429 @@
+version: "3.1"
+
+nlu:
+
+- intent: clarify_location
+  examples: |
+    - The location [Barcelona]{"entity": "location"}
+    - It is [Amsterdam]{"entity": "location"} 
+    - [London]{"entity": "location"}
+    - Sorry, the city [Paris]{"entity": "location"}
+
+- intent: clarify_building
+  examples: |
+    - The building [Edifici La Nau]{"entity": "building"}
+    - It is the [Edifici La Nau]{"entity": "building"} campus
+    - [Edifici La Nau]{"entity": "building"}
+    - Sorry, the Campus [La Nau]{"entity": "building"}
+    
+- intent: clarify_room
+  examples: |
+    - The room is [52.100]{"entity": "room"}
+    - It is the [55400]{"entity": "room"} room number
+    - I ment [43.200]{"entity": "room"}
+    - Yes, [52.200]{"entity": "room"} 
+    - It is class [52238]{"entity": "room"} 
+
+- intent: clarify_department
+  examples: |
+    - The department is [AI&ML]{"entity": "department"}
+    - It is the [Research Services]{"entity": "department"}
+    - [WSSC: Web Science and Social Computing]{"entity": "department"}
+    - [Sounds Computing]{"entity": "department"}
+    - Sorry I meant [WN: Wireless Networking Group]{"entity": "department"} group.
+
+- intent: clarify_professor
+  examples: |
+    - His name is [Xavier Monti LLopis]{"entity": "professor"}?
+    - It is professor [Patricia Pino]{"entity": "professor"}?
+    - [Marti Montiel]{"entity": "professor"}
+    - [Anders Johnsson]{"entity": "professor"}
+    - Sorry I meant [Anders Johnsson]{"entity": "professor"}
+    - Sorry it is [ALBO, LAIA]{"entity": "professor"}
+
+- intent: ask_building_departments
+  examples: |
+    - Which departments are in building [Edifici La Nau]{"entity": "building"}
+    - Which research groups can i find in the campus [La Nau]{"entity": "building"}
+
+- intent: ask_building_professors
+  examples: |
+    - Which professors are in building [Edifici La Nau]{"entity": "building"}
+    - Which employees can i find in the campus [La Nau]{"entity": "building"}
+    - WHo is currently in building [Tanger]{"entity": "building"}
+
+- intent: ask_building_rooms
+  examples: |
+    - Which rooms are in building [Edifici La Nau]{"entity": "building"}
+    - Which classroom can i find in the campus [La Nau]{"entity": "building"}
+  
+- intent: ask_building_general_information
+  examples: |
+    - Can I have more information about the [Edifici La Nau]{"entity": "building"} building?
+    - What about campus [Edifici La Nau]{"entity": "building"}?
+    - Provide some general information about the [Edifici La Nau]{"entity": "building"}
+    - What can I expect at the [Edifici La Nau]{"entity": "building"} building
+    - I want to know more about [Edifici La Nau]{"entity": "building"} campus
+
+- intent: ask_department_professors
+  examples: |
+    - Which professor are in the [Music Technology Group]{"entity": "department"}
+    - Who are in the [Phonos]{"entity": "department"}
+    - Can you list the people working in [NTSA]{"entity": "department"} research group
+    - Researchers in department of [Natural Language Processing]{"entity": "department"}
+    - Who can I find in the [Physense]{"entity": "department"}?
+    - I would like to know who works in the [Wireless Networking Group]{"entity": "department"}
+    - Who are the members of the [Ubiquitous Computing Applications Lab]{"entity": "department"}
+
+
+- intent: ask_department_general_information
+  examples: |
+    - Can I have more information about the [AI&ML]{"entity": "department"} department?
+    - Can you tell me anything about the [research Service]{"entity": "department"} research group?
+    - I want to know more about departments on the upf such as the [Natural Language Processing]{"entity": "department"}
+    - I would love to hear about the [Physense]{"entity": "department"} research group
+    - Can you describe the [Music Technology Group]{"entity": "department"}
+    - I'm looking for information about [Research Service]{"entity": "department"}
+
+- intent: ask_department_is
+  examples: |
+    - Does the University has a [AI&ML]{"entity": "department"} department?
+    - Is there a research group for [Research Service]{"entity": "department"} at UPF?
+    - Do you know if there is a [SIMBIOsys: Simulation, Imaging and Modelling for]{"entity": "department"}?
+    - Is there a [Natural Language Processing]{"entity": "department"} available?
+    - Is any entity focussed on [UGA TIC- Recruitment , Docorate & International ETIC]{"entity": "department"}
+    - Do you have an [UGA TIC]{"entity": "department"}?
+
+- intent: ask_department_room
+  examples: |
+    - Where is the department of [AI&ML]{"entity": "department"} located?
+    - Where can i find the [UGA TIC- Recruitment , Docorate & International ETIC]{"entity": "department"} group?
+    - Is the room number [55306]{"entity": "room"} of [UBICALAB]{"entity": "department"} group?
+    - Research group [Polytechnic School]{"entity": "department"} location?
+    - Department [UGA TIC]{"entity": "department"} in room [53.234]{"entity": "room"}?
+    - Can you provide information about the office of the [MTG]{"entity": "department"}
+    - Can you give the location of office of the [Web Science and Social Computing]{"entity": "department"}
+    - In which roomnumber can I find the  [WSSC]{"entity": "department"} group? Is it [55312]{"entity": "room"}
+
+- intent: ask_is_department_on_university
+  examples: |
+    - Does the University has a [AI&ML]{"entity": "department"} department?
+    - Is there a research group for [AI&ML]{"entity": "department"}?
+    - [AI&ML]{"entity": "department"}?
+    - [AI&ML]{"entity": "department"}
+    - Do you know if there is a [AI&ML]{"entity": "department"}?
+    - Is there a [AI&ML]{"entity": "department"} available?
+    - Is any entity focussed on [AI&ML]{"entity": "department"}
+    - Do you have an [AI&ML]{"entity": "department"}?
+
+- intent: ask_department_building
+  examples: |
+    - In which building is the [AI&ML]{"entity": "department"} department?
+    - What is the campus of the [AI&ML]{"entity": "department"} group?
+    - Is the [AI&ML]{"entity": "department"} located in the [Edifici La Nau campus]{"entity": "building"}.
+    - Is the [AI&ML]{"entity": "deparment"} located in the [Edifici La Nau building]{"entity": "building"}.
+    - Where in the city is the [AI&ML]{"entity": "deparment"} located?
+    - Building of [AI&ML]{"entity": "deparment"} location
+    - In which campus of UPF is the [AI&ML]{"entity": "deparment"}?
+
+- intent: ask_room_department
+  examples: |
+    - Which department is in room [55130]{"entity": "room"}
+    - Which research group can i find in [55119]{"entity": "room"}
+    - What is located in room [51017]{"entity": "room"}
+    - is the [MTG]{"entity": "department"} in room [52.300]{"entity": "room"}
+    - Can I find the [Music Technology Group] in room [55.306]{"entity":"room"}
+
+- intent: ask_room_professors
+  examples: |
+    - Which other professor than [Demiral]{"entity": "professor"} are in room [52.345]{"entity": "room"}
+    - Which professors are in [55.320]{"entity":"room"}?
+    - Professor in room [55.200]{"entity":"room"}?
+    - Do you know which researcher are in [55.200]{"entity":"room"}?
+    - Is there someone in room [55200]{"entity":"room"}?
+    - Who can i find in [51822]{"entity":"room"}?
+    - Is [Jorge Lobo]{"entity": "professor"} in room [56234]{"entity": "room"}
+
+- intent: ask_room_building
+  examples: |
+    - in which building is room [55.200]{"entity":"room"}.
+    - where is room [55300]{"entity": "room"} located?.
+    - on which campus is room{"entity": "room"}?.
+    - Can you give me information of the location of room [52.340]{"entity": "room"}.
+    - I'm looking for the building of room [51.100]{"entity": "room"}.
+    - In which building on the university can I find the [51.520]{"entity": "room"}?
+    - Where in the city is the [51432]{"entity": "room"}?
+    - Do you know where the campus of [51100]{"entity": "room"} is?
+    - Is room [55.124] in the [La Nau]{"entity":"building"} campus?
+    - Is room [55.124] located in [Edifici La Nau]{"entity":"building"} building?
+
+- intent: ask_room_general_information
+  examples: |
+    - Can I have more information about the [52400]{"entity": "room"} room?
+    - What about room [52.600]{"entity": "room"}?
+    - I'm interested to know about [55.200]{"entity": "room"}
+    - I would love to hear about the room [51.300]{"entity": "room"}
+    - Give me details about room [51.107]{"entity": "room"} in the [Edifici]{"entity": "building"}
+    - I'm looking for more information of the classroom [55119]{"entity": "room"} of the [IP4ECImage proccesing for enhanced cinematography]{"entity":"department"}
+
+- intent: ask_professor_general_information
+  examples: |
+    - Can I have more information about professor [Rauschenberger]{"entity": "professor"}?
+    - Can you tell me anything about [Rasoul Nikbakht]{"entity": "professor"}?
+    - I want to know more about [Zaira Pindado Tost]{"entity": "professor"} of the research group [SIMBIOsys]{"entity": "department"}
+    - General information [Karimihahighi]{"entity": "professor"}
+    - Do you know more about [Santiago]{"entity": "professor"}
+    - Do you have a description of [Federico Franzoni]{"entity": "professor"} of the [Research, Promotion & Activities]{"entity": "department"}?
+
+- intent: ask_professor_is
+  examples: |
+    - Is [Alex]{"entity": "professor"} a professor at Pompeu Fabra?
+    - Is [Jens Grivolla]{"entity": "professor"} teaching at UPF?
+    - Is [Gerard]{"entity": "professor"} working on the university?
+    - Is [Dimicocoli]{"entity": "professor"} working on the UPF?
+    - Is there a professor called [Item Cetin]{"entity": "professor"}?
+    - Is [Francesco]{"entity": "professor"} working here?
+    - [Carla Ten ventura]{"entity": "professor"} professor at department [WN]{"entity": "department"}?
+    - Works [Belen]{"entity": "professor"} here in the [Research Service]{"entity": "department"}?
+    - Do you know [Leo]{"entity": "professor"}. I think he is in the department of [Web Science and social Computing]{"entity": "department"}?
+    - Can I find [Gomez]{"entity": "professor"} on the uni?
+    - Is [Maria Rauschenberger]{"entity": "professor"} in this company
+    - Is [Ricardo Alberto]{"entity": "professor"} of the department [AI&ML]{"entity": "department"} here?
+
+- intent: ask_professor_building
+  examples: |
+    - Is professor [Laura Baumgartner]{"entity": "professor"} in the [Edifici La Nau]{"entity": "building"} building?
+    - In which campus is [Bart Bijnens]{"entity": "professor"}
+    - Where in the city can I find [Mario Ceresa]{"entity": "professor"}
+    - Building [Simone Tassani]{"entity": "professor"}
+    - Which house can i find [Sergio Sanchez Martinez]{"entity": "professor"}
+    - Can I find [Carlos Eduardo]{"entity": "professor"} in the [Edifici La Nau]{"entity": "building"} campus?
+
+- intent: ask_professor_room
+  examples: |
+    - Is [Josep]{"entity": "professor"} in room [52.205]{"entity": "room"}
+    - Where is the room of [Jorge]{"entity": "professor"} located?
+    - Where can i find the [Sayis]{"entity": "professor"}?
+    - Which is the room number of [Raquel Gil Rodriquez]{"entity": "professor"}?
+    - Where is the office of [Alexander Gomez]{"entity": "professor"}?
+    - In which office is [Itziar]{"entity": "professor"}? Is it room [55218]{"entity": "room"}
+    - Room [Patricia Vitoria Carrera]{"entity": "professor"}?
+    - Where am I most likely to find professor [Olga Slizovskaia]{"entity": "professor"}?
+    - Where do I find Mr. [Ivano Colombaro]{"entity": "professor"}?
+    - Am I likely to find [Fernandez]{"entity": "professor"} in room [55.424]{"entity":"room"}
+    - I am looking for [vicenç gomez]{"entity": professor}
+    - I would like to know where I can find professor [leo wanner]{"entity": "professor"}
+    - I'm looking for [boris bellalta]{"entity": "professor"}
+
+- intent: ask_professor_collegues 
+  examples: |
+    - Which professors are in the same department as [Jorge Lobo]{"entity": "professor"}?
+    - Can you give the other professors in the department of [Ciera Crowell]{"entity": "professor"}?
+    - Who are the collegues of [Martinez]{"entity": "professor"}?
+    - With who works [Olga Slizovskaia]{"entity": "professor"} together?
+    - Give the collegues of [Gerald]{"entity": "professor"}
+    - With who is [Philip Stovstogan]{"entity": "professor"} in the department of [CMTECH: Cognitive Media Technologies Group]{"entity":"department"}?
+    - [Jorge Lobo]{"entity": "professor"} is not available, can you give other professors in his department [CMTECH]{"entity":"department"}?
+    - [Ninad Puranik]{"entity": "professor"} other collegues
+    - Who are the teammates of [Andres Ferraro]{"entity": "professor"}?
+    - Who is likely to work closely together with [Sergio Oramas Martin]{"entity": "professor"} in the [BERG Biomedical Electronics Research Group]{"entity":"department"}?
+    - Which collegues of [Vincenç Gomez]{"entity": "professor"} are also in the research group [AI&ML]{"entity":"department"}
+    - Is [Philip Stovstogan]{"entity": "professor"} in the same department as Jorge Lobe?
+    - Are [Vincenç Gomez]{"entity": "professor"} and [Jorge Lobo]{"entity": "professor"} in the same research group?
+    - Is the faculty of [Jorge Lobe]{"entity": "professor"} and [Neu]{"entity": "professor"} the same?
+    - Is [Jens]{"entity": "professor"} in the [AI&ML department]{"entity": "department"} working with [Mariella]{"entity":"professor"}?
+    - Are [Maria]{"entity": "professor"} and [NURIA BARRIO]{"entity": "professor"} both in [AI&ML research group]{"entity": "department"}?
+
+- intent: ask_professor_department
+  examples: |
+    -In which department is professor [Jorge Lobo]{"entity": "professor"}
+    -What is the department of [Vincente Gomez]{"entity": "professor"}?
+    -Where is the research group of professor [Marco Jeroma Gasparrini]{"entity": "professor"}?
+    -In which research group is professor [Anders Jonnson]{"entity": "professor"}?
+    -What is the research group of [G. Neu]{"entity": "professor"}
+    -Department [Marti Sanchez Fibla]{"entity": "professor"}?
+    -In which field is [Damien Allonsius]{"entity": "professor"} operating? 
+    - Where is the department of the prof [Batuhan Sayis]{"entity": "professor"}? 
+    - Department professor [Alexander Gomez Villa]{"entity": "professor"}? 
+    - Which department can I find professor [Gloria Haro Ortega]{"entity": "professor"}? 
+    - Do you know the department of [Lara Raad Cisa]{"entity": "professor"}? 
+
+- intent: ask_more_information_upf
+  examples: |
+    - What is the website of the UPF.
+    - I want to know more about the University?
+    - I don't know that much about pompeu Fabra?
+    - URL UPF?
+    - Where can i find more general information about the university
+    - Can you provide me more information about the UPF
+
+- intent: fun_fact
+  examples: |
+    - Tell me a fun fact
+    - Can you tell me anything i don't know?
+    - Tell me a random fact
+    - Give me funny a fact
+    - What is the funniest thing you know?
+    - Do you have special information?
+    - I'm bored
+    - I want to learn something interesting
+
+- intent: ask_joke
+  examples: |
+    - I want to laugh
+    - Please tell me a fun joke
+    - Do you know jokes?
+    - I wanna impress my friends with a nice joke
+
+- intent: ask_time
+  examples: |
+    - Show me the time
+    - What is the time?
+    - Do you know the time?
+    - How late is it?
+    - What time is it in [Berlin]{"entity": "location"}
+    - How late is it in [Barcelona]{"entity": "location"}
+
+- intent: ask_developer_chatbot
+  examples: |
+    - Is Niels the developer
+    - Is Rafeal the developer
+    - Is Fernando the developer
+    - The developer is awesome
+    - Who made this chatbot
+    - Who controls the back-end?
+    - Who made this bot?
+    - Who is the developer
+    - Developer bot
+    - Who created you
+    - Who came up with this chatbot?
+    - Who are you?
+
+- intent: ask_weather
+  examples: |
+    - What's the weather in [Berlin]{"entity": "location"} at the moment?
+    - What's the weather today?
+    - What's the weather in [London]{"entity": "location"} today?
+    - Show me what's the weather in [Paris]{"entity": "location"}
+    - I wonder what is the weather in [Vilnius]{"entity": "location"} right now?
+    - what is the weather?
+    - Tell me the weather
+    - Is the weather nice in [Barcelona]{"entity": "location"} today?
+    - Tell me the weather in [Vilnius]{"entity": "location"}
+    - The weather condition in [Italy]{"entity": "location"}
+    - [Paris]{"entity": "location"} Temerature
+    - May I know weather today
+    - Is it sunny today in [Amsterdam]{"entity": "location"}   
+   
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - holla
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - oke 
+    - i agree
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: bad_help
+  examples: |
+    - That is not the answer to my question.
+    - That is not correct.
+    - I don't understand you
+    - Are you sure?
+    - Your information seems to be incorrect
+    - That is not true.
+    - You are lying
+    - No, that is not where is was looking for
+    - That did not help me
+    - I'm not satisfied with this answer
+    - You are inaccurate
+    - This raises only more questions
+
+- intent: good_help
+  examples: |
+    - Thankyou for your help
+    - You solved all my problems
+    - I'm really happy with this answer
+    - Your response saved me a lot of times
+    - I will recommend you to my friends
+    - Thankyou for your help chatbot
+    - Thankyou see you next time 
+    - Ty for the information
+    - That was helpfull
+    - Okay, thanks

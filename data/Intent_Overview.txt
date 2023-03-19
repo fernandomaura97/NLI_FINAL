@@ -1,0 +1,107 @@
+Intents Are Created Related To The Following Topics:
+
+1. Professor
+2. Room
+3. Department
+4. Building
+5. General_information
+6. Clarifying_Entity_Info
+7. Greet_and_Goodbye
+8. Expres_Feeling
+9. Feedback_help
+
+These Topics Have The Following Intents
+1. Professor:
+    1A. ask_professor_room 
+        "User wants information about the room of a professor"
+    1B. ask_professor_department
+        'User wants information about the department of a professor'
+    1C. ask_professor_general_information
+        'User wants general information about the department of a professor'
+    1D. ask_professor_building
+        'User wants information about the building of a professor'
+    1E. ask_professor_is
+        'User wants information if a certain name is a professor'
+    1F. ask_professor_collegues
+        'User wants information about the collegues of a professor'
+
+2. Room:
+    2A. ask_room_professors 
+        "User wants information about which professors are in a room"
+    2B. ask_room_department
+        "User wants information about which departments are in a room"
+    2C. ask_room_general_information
+        "User wants general information about a room"
+    2D. ask_room_building
+        "User wants information in which building a room is"
+
+3. Department
+    3A. ask_department_professors 
+        "User wants information about which professors are in a department"
+    3B. ask_department_room
+        "User wants information about which rooms the department is located"
+    3C. ask_department_general_information
+        "User wants general information about a department"
+    3D. ask_department_building
+        "User wants information in which building a department is"
+    3E ask_department_is
+        "Users want information if a department is located on the UPF"
+
+4. Building
+    4A. ask_building_professors 
+        "User wants information about which professors are in buidling"
+    4B. ask_building_room
+        "User wants information about which rooms are in the building"
+    4C. ask_building_general_information
+        "User wants general information about a building"
+    4D. ask_building_department
+        "User wants information in which department are in the building"
+
+5. General_information
+    5A. ask_more_information_upf
+        "User want to have more information about the UPF"
+    5B. fun_fact
+        "User wants to hear a fun fun_fact
+    5C. ask_developer_chatbot
+        "User want to know who developed the ask_developer_chatbot
+    5D  ask_weather
+        "User want to know information regarding the weather"
+    5E  ask_time 
+        "User wants to know the time"
+    5F  ask_joke
+        "User wants to hear a funny joke"
+    
+6. Clarifying_Entity_Info
+    6A. clarify_professor
+        "User repeats (correct) professor name"
+    6B. clarify_room
+        "User repeats (correct) professor room"
+    6C. clarify_department
+        "User repeats (correct) department"
+    6D. clarify_building
+        "User repeats (correct) building"
+    6E. clarify_location
+        "User repeats (correct) location"
+
+7. Greet_and_Goodbye
+    7A. greet 
+        "User says hello"
+    7B. goodbye  
+        "User says goodbye"
+
+8. Expres_Feeling
+    8A. mood_great
+        "User says he is feeling good"
+    8B. mood_unhappy
+        "User says he is feeling bad"
+
+9. Feedback
+    9A. bad_help
+        "User says that chatbot provided bad help"
+    9B. good_help
+        "User says that chatbot provided good help"
+    9C. affirm 
+        "Users agrees"
+    9D. deny
+        "User disagrees
+

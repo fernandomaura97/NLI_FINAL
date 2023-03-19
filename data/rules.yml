@@ -1,0 +1,42 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say it was a please after user's say thankyou for your help
+  steps:
+  - intent: good_help
+  - action: utter_good_help
+
+- rule: Say sorry after bad help and ask for repeating question
+  steps:
+  - intent: bad_help
+  - action: utter_bad_help
+
+- rule: "Say that is great if user feeling good"
+  steps:
+  - intent: mood_great
+  - action: utter_mood_great
+
+- rule: "Say joke to cheer you up if user feeling bad"
+  steps: 
+  - intent: mood_unhappy
+  - action: utter_mood_bad
+  - action: action_joke_generator
+
+- rule: "Agrees back to user"
+  steps: 
+  - intent: affirm
+  - action: utter_agree
+
+- rule: "user deny"
+  steps: 
+  - intent: deny
+  - action: utter_apologize
+
+
+

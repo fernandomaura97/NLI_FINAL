@@ -1,105 +1,88 @@
 version: "3.1"
 
 intents:
-  - fun_fact
-  - ask_office_building
-  - ask_is_department_on_university
-  - ask_is_professor
-  - ask_same_department_professors
-  - ask_url_department
-  - ask_building_department
-  - ask_room_professor
+  - ask_professor_room
+  - ask_professor_department
+  - ask_professor_general_information
+  - ask_professor_building
+  - ask_professor_is
+  - ask_professor_collegues
+  - ask_room_professors
   - ask_room_department
-  - ask_other_professor_in_department
-  - ask_department_professor
+  - ask_room_general_information
+  - ask_room_building
+  - ask_department_professors
+  - ask_department_room
+  - ask_department_general_information
+  - ask_department_building
+  - ask_department_is
+  - ask_building_professors
+  - ask_building_room
+  - ask_building_general_information
+  - ask_building_department
+  - ask_more_information_upf
+  - fun_fact
   - ask_developer_chatbot
   - ask_weather
   - ask_time
+  - ask_joke
+  - clarify_professor
+  - clarify_room
+  - clarify_building
+  - clarify_department
+  - clarify_location
   - greet
   - goodbye
-  - affirm
-  - deny
   - mood_great
   - mood_unhappy
-  - bot_challenge
-  - name
   - bad_help
   - good_help
-
- 
+  - affirm
+  - deny
+  
+   
 actions:
   - action_hello_world
   - action_give_time
-  - action_department_professor
   - action_ask_weather
   - action_fun_fact
-  - action_test_slot_fill
+  - action_information_professor
+  - action_information_department
+  - action_information_room
+  - action_information_building
+  - action_joke_generator
 
 responses:
-
-  utter_deny_department:
-    - text: "There is unfortunately no ... department on the UPF, but we have department for Department_Full"
-
-  utter_confirm_department:
-    - text: "Yes there is an department for .... on the UPF"
-
-  utter_office_in_building:
-    - text: "The room is located in the Poblenue Campus."
-
-  utter_no_problem:
+ 
+  utter_good_help:
     - text: "It was a pleasure to help you. I can't wait to speak you again if you have some questions"
+
+  utter_more_information_upf:
+    - text: "You can find more information about Pompue Fabra (UPF) on the website https://www.upf.edu/"
   
-  utter_repeat_question:
-    - text: "Can you please reformulate your question. I did not understand you correctly, sorry"
-
-  utter_department_building:
-    - text: "The AI&ML department is in the Poblenue Campus."
-
-  utter_room_prof:
-    - text: "Professor Jorge Lob is in the AI&ML Department."
-
-  utter_url_department:
-    - text: "The URL is: https://www.upf.edu/web/iis/academic-information."
-  
-  utter_prof_is_college:
-    - text: "Professor Jorge Lobo is a college of Pietje Bell"
-
-  utter_room_in_building:
-    - text: "The room 55.309 is in the Poblenue Campus"
-
-  utter_room_department:
-    - text: "The AI&ML department is the room 55309"
-
-  utter_department_of_prof:
-    - text: "The professor is located in the AI&ML department."
-
   utter_who_is_developer:
-    - text: "Niels is the beauty (and the brain) behind this awesome chatbot."
+    - text: "Niels, Rafeal and Fernando are the beauty (and the brains) powering me!"
   
-  utter_prof_in_department:
-    - text: "Professor Jorge Lobo is in the department"
-
   utter_greet:
-    - text: "Hey! I cannot wait to help you with questions related to the professors and their department, office rooms and building where they are located."
+    - text: "Hey! I cannot wait to help you with questions related to the professors, departments, office rooms and buildings on the Pompue Fabra University in Barcelona. I can also help you with information regarding the weather, time. And if you want to impress your friends I can tell you funny facts or jokes!"
 
-  utter_kaas:
-  - text: "Ik hou van kaas"
+  utter_mood_great:
+    - text: "Great! Carry On!"
 
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+  utter_mood_bad:
+    - text: "That is sad to hear, hopefully a joke can cheer you up"
 
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
+  utter_bad_help:
+    - text: "I'm really sorry for the bad help. Can you please repeat the question?"
 
   utter_goodbye:
-  - text: "Bye"
+  - text: "Bye! Hopefully I see you soon!"
 
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  utter_agree:
+  - text: "Oke!"
+
+  utter_apologize:
+  - text: "I'm sorry"
 
 entities:
   - professor
@@ -110,8 +93,263 @@ entities:
 
 nlu:
 - lookup: professor
+  examples: | 
+    - jorge lobo
+    - marco jerome gasparrini
+    - vicente gomez cerda
+    - anders jonsson
+    - gergely neu
+    - marti sanchez fibla
+    - victor dalmau lloret
+    - vladimir estivill castro
+    - pablo aragon asenjo
+    - joan bas serrano
+    - silvia butti
+    - iuliia olkhovskaia
+    - nicolas gaston rozado
+    - lorenzo steccanella
+    - damien allonsius
+    - berkay demirel
+    - ana gonzalez suarez
+    - javier aguirre olcoz
+    - quim castellvi
+    - albert comerma montells
+    - tomás garcia sanchez
+    - aracelys garcia moreno
+    - laura becerra fajardo
+    - ahmed fayez saad mohamed eladly eladly
+    - borja mercadal cavaller
+    - jesus minguillon campos
+    - marc tudela pi
+    - guillermo jimenez perez
+    - rocio lopez velazco
+    - enric perera i bel
+    - antonio ivorra cano
+    - xerxes dinyar arsiwalla
+    - riccardo zucca
+    - ciera crowell
+    - laura malinverni
+    - joan mora guiard
+    - marie-monique schaper
+    - decky latif
+    - oriol martinez pujol
+    - xavier binefa valls
+    - adriana fernandez lopez
+    - gerald hahn
+    - maria de araceli morales muñoz
+    - federico mateo sukno
+    - narcis pares burgues
+    - batuhan sayis
+    - ernest montbrió fairen
+    - marcelo josé bertalmio barate
+    - trevor dalton canham
+    - praveen cyriac
+    - raquel gil rodriguez
+    - alexander gomez villa
+    - itziar zabaleta razquin
+    - adrian martin fernandez
+    - adrià arbues sangüesa
+    - adrian fernando ponce alvarez
+    - patricia vitoria carrera
+    - coloma maria ballester nicolau
+    - gloria haro ortega
+    - lara raad cisa
+    - juan francisco garamendi bragado
+    - juan felipe montesinos garcia
+    - venkatesh shenoy kadandale
+    - olga slizovskaia
+    - josep font segura
+    - alfonso martinez vicente
+    - ivano colombaro
+    - arezou rezazadeh
+    - sergio barrachina muñoz
+    - albert guillen fabregas
+    - sebastián roberto marichal baraibar
+    - javier agenjo asensio
+    - irum baseer
+    - maria bosser carenys
+    - beatriz cabrero daniel
+    - joaquim colas alvarez
+    - ricardo jorge marques
+    - judit martínez moreno
+    - hermann plass portulas
+    - jose angel blat gimeno
+    - philip tovstogan
+    - mehmet furkan yesiler
+    - rafael caro repetto
+    - vsevolod eremenko
+    - ninad puranik
+    - antónio filipe santana ramires
+    - tiange zhu
+    - david cabrera
+    - albin andrew correya
+    - xavier favory
+    - andres ferraro
+    - eduardo david fonseca montero
+    - frederic font corbera
+    - sergio oramas martin
+    - alastair stewart porter
+    - pablo alonso jimenez
+    - dmitry bogdanov
+    - jordi pons puig
+    - minz won
+    - merlijn blaauw
+    - jordi bonada sanjaume
+    - marti umbert morist
+    - aggelos gkiokas
+    - marius miron
+    - alfonso antonio perez carrillo
+    - emilia gomez gutierrez
+    - enrique guaus termens
+    - agustin martorell dominguez
+    - sergio iván giraldo mendez
+    - rafael ramirez melendez
+    - zacharias vamvakousis
+    - helena cuesta mussarra
+    - juan sebastián gomez cañon
+    - perfecto jose herrera boyer
+    - lorenzo porcaro
+    - joan serra julia
+    - angel-david blanco casares
+    - azadeh faridi ermagan
+    - sonia espi fernandez
+    - cristina garrido franquet
+    - francesc xavier serra casals
+    - sergi jorda puig
+    - andres lewin richter osiander
+    - angel faraldo perez
+    - leo wanner
+    - horacio saggion
+    - miquel oliver riera
+    - ralph gregor andrzejak
+    - federico devalle
+    - cristina gonzalez martinez
+    - irene malvestio
+    - angela ogbugwa ochugboju
+    - giulia ruzzene
+    - judit chamorro servent
+    - marta guardiola garcia
+    - carlos yagüe mendez
+    - ruben doste beltran
+    - gerard marti juan
+    - mariana nogueira
+    - cecilia maria costa bento sousa nunes
+    - morteza rasouligandomani
+    - oscar camara rey
+    - bart h bijnens
+    - paloma benavent climent
+    - belen pascual molina
+    - manuel ronda carrasco
+    - miguel angel gonzalez ballester
+    - mario ceresa
+    - nerea mangado lopez
+    - katharina heil
+    - karim lekadir
+    - jerome bernard noailly
+    - andy luis olivares miyares
+    - carlos eduardo ruiz wills
+    - simone tassani
+    - sergio sanchez martinez
+    - jordina torrents barrena
+    - laura baumgartner
+    - víctor manuel campello roman
+    - irem cetin
+    - amelia jimenez sanchez
+    - eric lluch alvarez
+    - pablo-miki martí castellote
+    - gema piella fenoy
+    - joan codina filba
+    - hamdi alp öktem
+    - mireia farrus cabeceran
+    - ahmed ghassan tawfiq abura'ed
+    - francesco barbieri
+    - giorgia cistola
+    - alex peiro lilja
+    - roberto juan carlini salguero
+    - carla ten ventura
+    - jens grivolla
+    - gerard casamayor del bosque
+    - alexandra-catalina matreata
+    - mariella dimiccoli
+    - beatriz fisas elizalde
+    - alexander shvets
+    - pablo accuosto
+    - alex bravo serrano
+    - kim cheng sheang
+    - laia albo
+    - ishari amarasinghe
+    - marc yoshimi beardsley
+    - milica vujovic
+    - pascual pablo abenia polo
+    - davinia hernandez leo
+    - patricia santos rodriguez
+    - enric peig olive
+    - joan antoni melia segui
+    - rafael pous andres
+    - victor casamayor pujol
+    - veronica moreno oliver
+    - judith champion colell
+    - nuria figuls fernandez
+    - montserrat jaureguizar salas
+    - maria lourdes ventayol borras
+    - lydia garcia escobosa
+    - jana safrankova
+    - maria montserrat brillas rosell
+    - montserrat serrano raguan
+    - joana clotet sule
+    - vanessa jimenez garcia
+    - mohit hemchandra adhikari
+    - boris bellalta jimenez
+    - francisco jose wilhelmi roca
+    - federico franzoni
+    - rasoul nikbakht silab
+    - zaira pindado tost
+    - xavier salleras soler
+    - javier silva velon
+    - vanesa daza fernandez
+    - carla rafols salvador
+    - angel lozano solsona
+    - antonio adame vazquez
+    - albert bel pereira
+    - marc carrascosa zamacois
+    - alejandro alcaine otin
+    - carlos alberto alejandro castillo ocaranza
+    - ana maria freire veiga
+    - santiago galella toledo
+    - marzieh karimihaghighi
+    - diana michelle ramirez cifuentes
+    - maria rauschenberger
+    - ricardo alberto baeza yates
+      
+# - synonym: professor
+#   examples: |
+#       - professor
+#       - teacher
+#       - lecturer
+#       - docent
+#       - tutor
+#       - instructor
+#       - prof
+#       - researcher
+#       - research assistant
+#       - UGA member 
+#       - PSR
+
+- synonym: room
   examples: |
-    
+      - laboratory
+      - room
+      - desk
+      - lab
+      - headroom
+
+- synonym: research group
+  examples: |
+    - research group
+    - group
+    - working group
+    - scientific crew
+
 
 slots:
   professor:
@@ -125,6 +363,24 @@ slots:
     mappings:
     - type: from_entity
       entity: location
+
+  room:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: room
+
+  building:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: building
+
+  department:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: department
       
 session_config:
   session_expiration_time: 60

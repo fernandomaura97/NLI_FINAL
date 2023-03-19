@@ -1,0 +1,330 @@
+version: "3.1"
+
+stories:
+
+
+- story: 21.2 user asks general information building ('User doesn't mention building)
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_building_general_information
+    - action: action_information_building
+    - intent: clarify_building
+    - action: action_information_building
+
+- story: 21.1 user asks general information building
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_building_general_information
+    - action: action_information_building
+
+- story: 22.2 user asks which department(s) are in building ('User doesn't mention building)
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_building_department
+    - action: action_information_building
+    - intent: clarify_building
+    - action: action_information_building
+
+- story: 22.1 user asks which department(s) are in building
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_building_department
+    - action: action_information_building
+
+- story: 21.2 user asks which room(s) are in building ('User doesn't mention building)
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_building_room
+    - action: action_information_building
+    - intent: clarify_building
+    - action: action_information_building
+
+- story: 21.1 uuser asks which room(s) are in building
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_building_room
+    - action: action_information_building
+
+- story: 20.2 user asks which professors(s) are in building ('User doesn't mention building)
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_building_professors
+    - action: action_information_building
+    - intent: clarify_building
+    - action: action_information_building
+
+- story: 20.1 user asks which professors are in building
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_building_professors
+    - action: action_information_building
+
+- story: 19.1 user asks if there is such a department
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_department_building
+    - action: action_information_department
+
+- story: 18.2 user asks in which building(s) is department ('User doesn't mention department)
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_department_building
+    - action: action_information_department
+    - intent: clarify_department
+    - action: action_information_department
+
+- story: 18.1 user asks in which building(s) is department
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_department_building
+    - action: action_information_department
+
+- story: 17.1 user asks in which room(s) is department ('User doesn't mention department)
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_department_room
+    - action: action_information_department
+    - intent: clarify_department
+    - action: action_information_department
+
+- story: 17.1 user asks in which room(s) is department
+  steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_department_room
+      - action: action_information_department
+
+- story: 16.1 user asks which professors are in department ('User doesn't mention department)
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_department_professors
+    - action: action_information_department
+    - intent: clarify_department
+    - action: action_information_department
+
+- story: 16.1 user asks which professors are in department
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_department_professors
+    - action: action_information_department
+
+- story: 15.2 user ask which in which is building is room   ("User doesn't mention room")
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_room_building
+    - action: action_information_room
+    - intent: clarify_room
+    - action: action_information_room
+
+- story: 15.1 user ask in which is building is room
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_room_building
+    - action: action_information_room
+
+- story: 14.2 user asks general information about room  ("User doesn't mention room")
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_room_general_information
+    - action: action_information_room
+    - intent: clarify_room
+    - action: action_information_room
+
+- story: 14.1 user asks general information about room 
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_room_general_information
+    - action: action_information_room
+
+- story: 13.2 user ask which department(s) are in room  ("User doesn't mention room")
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_room_department
+    - action: action_information_room
+    - intent: clarify_room
+    - action: action_information_room
+
+- story: 13.1 user ask which department(s) are in room 
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_room_department
+    - action: action_information_room
+
+- story: 12.2 user ask which professors are in room ("User doesn't mention room")
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_room_professors
+    - action: action_information_room
+    - intent: clarify_room
+    - action: action_information_room
+
+- story: 12.1 user ask which professors are in room 
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_room_professors
+    - action: action_information_room
+ 
+- story: 11.2 user ask about collegues professor (FORGET PROF NAME)
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_professor_collegues
+    - action: action_information_professor
+    - intent: clarify_professor
+    - action: action_information_professor
+
+- story: 11.1 user ask about collegues professor
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_professor_collegues
+    - action: action_information_professor
+
+- story: 10.1 Check if person is a professor 
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_professor_is
+    - action: action_information_professor
+
+- story: 9.2 Building of Professor (USER FORGOT NAME PROFESSOR)
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_professor_building
+    - action: action_information_professor
+    - intent: clarify_professor
+    - action: action_information_professor
+
+- story: 9.1 Building of Professor
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_professor_building
+    - action: action_information_professor
+
+- story: 8.2 Information about the professors (USER FORGOT NAME PROFESSOR)
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_professor_general_information
+    - action: action_information_professor
+    - intent: clarify_professor
+    - action: action_information_professor
+
+- story: 8.1 Information about the professors
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_professor_general_information
+    - action: action_information_professor
+
+- story: 7.2 Room Of Professor (User Forget To Mention Prof)
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_professor_room
+    - action: action_information_professor
+    - intent: clarify_professor
+    - action: action_information_professor
+
+- story: 7.1 Room Of Professor
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_professor_room
+    - action: action_information_professor
+
+- story: 6.2 Department of Prof (User Forget To Mention Prof)
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_professor_department
+    - action: action_information_professor
+    - intent: clarify_professor
+
+- story: 6.1 Department of Prof
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_professor_department
+    - action: action_information_professor
+
+- story: 5.1 More Information UPF
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_more_information_upf
+    - action: utter_more_information_upf
+
+- story: 4.1 who is the developer
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_developer_chatbot
+  - action: utter_who_is_developer
+
+- story: 3.1 Can You Give a Fun Fact
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: fun_fact
+    - action: action_fun_fact
+
+- story: 2.2 What is the weather (user's first forget location)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_weather
+  - action: action_ask_weather
+  - intent: clarify_location
+  - action: action_ask_weather
+
+- story: 2.1 What is the weather
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_weather
+  - action: action_ask_weather
+
+- story: 1.1 What is Time
+  steps:
+  - intent: ask_time
+  - action: action_give_time
+
+- story: 0.1 Ask Joke
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_joke
+  - action: action_joke_generator
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_mood_great
+
