@@ -235,7 +235,6 @@ nlu:
     - Is [Jens]{"entity": "professor"} in the [AI&ML department]{"entity": "department"} working with [Mariella]{"entity":"professor"}?
     - Are [Maria]{"entity": "professor"} and [NURIA BARRIO]{"entity": "professor"} both in [AI&ML research group]{"entity": "department"}?
 
-[jorge lobo](professor)
 - intent: ask_professor_department
   examples: |
     -In which department is professor [Jorge Lobo]{"entity": "professor"}
