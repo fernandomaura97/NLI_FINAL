@@ -21,6 +21,7 @@ intents:
   - ask_building_general_information
   - ask_building_department
   - ask_more_information_upf
+  - ask_is_department_on_university
   - fun_fact
   - ask_developer_chatbot
   - ask_weather
@@ -85,6 +86,7 @@ responses:
   - text: "I'm sorry"
 
 entities:
+  - professor
   - prof
   - building
   - department
