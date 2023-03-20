@@ -82,9 +82,8 @@ for i in df.Room_with_Dot:
   count += 1
   try:
     j = float(i)
-    # print("J:",j, int(j%50))
     j = int(j%50)
-    # print("df  thing? ", df.Building_UP[count])
+
     if j == 1:
       df.Building_UP[count] = "La Nau".upper()
     elif j == 2: 
@@ -263,8 +262,9 @@ class ActionHelloWorld(Action):
                         print(f'The department is: {str(department.tolist())[1:-1].upper()}')
                         department_search = (department)[0]    
                         other_professors = df.loc[(df[department_cols]==department_search.upper()).any(axis="columns")]['Professor_Nice_Name'].unique().tolist()
-                        print (other_professors)
-                        other_professors.remove(professor)
+                        if len(other_professors)>0:
+                            print (other_professors)
+                            other_professors.remove(professor)
                         building = df_info["Building"].to_string(index=False)
                         building = building.lower()
                         message = (f"Professor {professor} could be find in room: {room} in the {department_search} department together with {', '.join(other_professors)}. This department is located in the {building} building.")
