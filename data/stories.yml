@@ -1,8 +1,6 @@
 version: "3.1"
 
 stories:
-
-
 - story: 21.2 user asks general information building ('User doesn't mention building)
   steps:
     - intent: greet

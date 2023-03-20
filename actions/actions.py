@@ -93,7 +93,7 @@ for i in df.Room_with_Dot:
     elif j == 4: 
       df.Building_UP[count] = "Area Tallers".upper()
     elif j == 5: 
-      df.Building_UP[count] = "Tanger building".upper()
+      df.Building_UP[count] = "Tanger".upper()
     # print(df.Building_UP[count])
 
   except:
@@ -109,7 +109,17 @@ department_cols = ['Department_UP','Department_Full', 'Department_Short']
 room_cols = ['Room_UP', 'Room_with_Dot']
 building_cols = ['Building_UP']
 
-#Fuzzy Search Implementation
+# #Fuzzy Search Implementation
+# required_confidence_level = 80
+# def fuzzy_search(query, choices, scorer=fuzz.ratio, cutoff=45):
+#     results = {}
+#     for choice in choices:
+#         score = scorer(query, choice)
+#         if score >= cutoff:
+#             #results.append((choice, score))
+#             results[choice] = score
+#     return {k: v for k, v in sorted(results.items(), key=lambda item: item[1], reverse=True)}
+
 required_confidence_level = 80
 def fuzzy_search(query, choices, scorer=fuzz.ratio, cutoff=45):
     results = {}
@@ -118,7 +128,23 @@ def fuzzy_search(query, choices, scorer=fuzz.ratio, cutoff=45):
         if score >= cutoff:
             #results.append((choice, score))
             results[choice] = score
-    return {k: v for k, v in sorted(results.items(), key=lambda item: item[1], reverse=True)}
+    result = {k: v for k, v in sorted(results.items(), key=lambda item: item[1], reverse=True)}
+    items = list(result.items())
+    n = 6
+    # Slice the list to get the first n elements
+    result = items[:n]
+
+    # Convert the result back to a dictionary
+    result_dict = dict(result)
+   
+    return result_dict
+
+
+
+
+
+
+
 
 #Basic Set-Up For A Function
 class ActionHelloWorld(Action):
@@ -195,11 +221,11 @@ class ActionHelloWorld(Action):
                 a = jokes(f)
 
                 for i in (a):
-                   mess2 = i["type"]
+                #    mess2 = i["type"]
                    mess3 = i["setup"]
                    mess4 = i["punchline"]
 
-                message = mess1 + '\n' + mess2 + '\n' +  mess3 + '\n' + mess4
+                message = mess1 + '\n' +  mess3 + '\n' + mess4
                 dispatcher.utter_message(text=message)
                 return []
       
@@ -317,7 +343,7 @@ class ActionHelloWorld(Action):
                         building = df_info["Building"].unique().tolist()
                         mess_prof = f"The following {len(professor)} professors are in the {', '.join(department)} department: {', '.join(professor)}."
                         mess_room = f"The {', '.join(department)} department is located in the following rooms: {', '.join(room)}."
-                        mess_building = f"These rooms are located in these building(s): {', '.join(building).lower()}."
+                        mess_building = f"These rooms are located in these building: {', '.join(building).lower()}."
                         message = mess_building + "\n" + mess_room + "\n" + mess_prof
                 dispatcher.utter_message(text=message)
 
@@ -366,7 +392,7 @@ class ActionHelloWorld(Action):
                         mess_prof = f"The following {len(professor)} professors are in the {', '.join(room)} room: {', '.join(professor)}."
                         mess_department = f"The {', '.join(room)} room is in part of the department(s) of : {', '.join(department)}."
                         #mess_room = f"The {', '.join(department)} department is located in the following rooms: {', '.join(room)}."
-                        mess_building = f"The room(s) are located in these building(s): {', '.join(building)}"
+                        mess_building = f"The room are located in these building: {', '.join(building).capitalize()}"
                         message = mess_prof + "\n" + mess_department + "\n" + mess_building
                 dispatcher.utter_message(text=message)
 
@@ -385,7 +411,7 @@ class ActionHelloWorld(Action):
                 if building == None: #Slot Value Was Not Given By User
                     message =f"Sorry, I did not understand the number of the room correctly or you forget to mention it. Could you please repeat it?."
                 else:
-                    building = str(building).upper()
+                    building = str(building).capitalize()
                     print ("Slot Filled")
                     building_found = False
                     if building in buildings_list: #Perfect Match
@@ -413,10 +439,10 @@ class ActionHelloWorld(Action):
                         room = df_info["Room_with_Dot"].unique().tolist()
                         department = df_info["Department"].unique().tolist()
                         building = df_info["Building"].unique().tolist()
-                        mess_prof = f"The following {len(professor)} professors are likely to be found in {', '.join(building)} building: {', '.join(professor)}"
+                        mess_prof = f"The following {len(professor)} professors are likely to be found in {', '.join(building).capitalize} building: {', '.join(professor)}"
                         mess_room = f"The following rooms are in the {', '.join(building)} building: {', '.join(room)}"
                         #mess_building = f"The room is located in this building: {', '.join(building)}"
-                        mess_department = f"The {', '.join(building)} building at UPF has the following department(s): {', '.join(department)}"
+                        mess_department = f"The {', '.join(building).capitalize()} building at UPF has the following department(s): {', '.join(department)}"
                         message = mess_department + "\n" + mess_room + "\n" + mess_prof
                 dispatcher.utter_message(text=message)
 
