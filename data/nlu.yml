@@ -122,10 +122,10 @@ nlu:
     - In which building is the [AI&ML]{"entity": "department"} department?
     - What is the campus of the [AI&ML]{"entity": "department"} group?
     - Is the [AI&ML]{"entity": "department"} located in the [Edifici La Nau campus]{"entity": "building"}.
-    - Is the [AI&ML]{"entity": "deparment"} located in the [Edifici La Nau building]{"entity": "building"}.
-    - Where in the city is the [AI&ML]{"entity": "deparment"} located?
-    - Building of [AI&ML]{"entity": "deparment"} location
-    - In which campus of UPF is the [AI&ML]{"entity": "deparment"}?
+    - Is the [AI&ML]{"entity": "department"} located in the [Edifici La Nau building]{"entity": "building"}.
+    - Where in the city is the [AI&ML]{"entity": "department"} located?
+    - Building of [AI&ML]{"entity": "department"} location
+    - In which campus of UPF is the [AI&ML]{"entity": "department"}?
 
 - intent: ask_room_department
   examples: |
@@ -210,7 +210,7 @@ nlu:
     - Room [vatricia vitoria carrera](prof)?
     - Where am I most likely to find professor [olga slizovskaia](prof)?
     - Where do I find Mr. [cvano colombaro](prof)?
-    - Am I likely to find [fernandez](prof) in room [55.424]{"entity":"room"}
+    - Am I likely to find [albert bel pereira](prof) in room [55.424]{"entity":"room"}
     - I am looking for [vicenç gomez](prof)
     - I would like to know where I can find professor [leo wanner](prof)
     - I'm looking for [boris bellalta](prof)
